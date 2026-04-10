@@ -4,12 +4,17 @@ extends CharacterBody2D
 const PLAYER_MAX_SPEED: float = 70
 		
 var direction: Vector2 = Vector2.DOWN
-var health: int = 5
+var health: int = 5:
+	health = value
+	health_bar.value = value
 
+#add health bar in nodes and name is as HealthBar
 @onready var health_bar: ProgressBar = $HealthBar
 @onready var sprite: CharacterSprite = $Sprite2D		
 
 func _ready() -> void:
+	#Set the health bar's max value to the health at the start
+	health_bar.value = max
 	$AttackHitbox.monitoring = false
 	$AttackHitbox.hide()
 
