@@ -6,6 +6,7 @@ const PLAYER_MAX_SPEED: float = 70
 var direction: Vector2 = Vector2.DOWN
 var health: int = 5
 
+@onready var health_bar: ProgressBar = $HealthBar
 @onready var sprite: CharacterSprite = $Sprite2D		
 
 func _ready() -> void:
